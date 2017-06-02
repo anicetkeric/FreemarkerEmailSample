@@ -21,6 +21,8 @@ Apache FreeMarker is a template engine: a Java library to generate text output (
 ```
 ####	configuration
 in application.properties files
+
+```
 spring.main.banner-mode=off
 
 #email
@@ -28,3 +30,4 @@ email.host=smtp.gmail.com
 email.port=587
 email.username=your_smtp_email_sender
 email.password=your_smtp_password_sender
+```
