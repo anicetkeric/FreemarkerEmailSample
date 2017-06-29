@@ -31,3 +31,26 @@ email.port=587
 email.username=your_smtp_email_sender
 email.password=your_smtp_password_sender
 ```
+
+bean conf
+
+```java
+@Bean
+	    public JavaMailSender getMailSender() {
+	        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+	 
+	        mailSender.setHost(emailProperties.getHost());
+	        mailSender.setPort(Integer.parseInt(emailProperties.getPort()));
+	        mailSender.setUsername(emailProperties.getUsername());
+	        mailSender.setPassword(emailProperties.getPassword());
+	 
+	        Properties javaMailProperties = new Properties();
+	        javaMailProperties.put("mail.smtp.starttls.enable", "true");
+	        javaMailProperties.put("mail.smtp.auth", "true");
+	        javaMailProperties.put("mail.transport.protocol", "smtp");
+	        javaMailProperties.put("mail.debug", "true");
+	 
+	        mailSender.setJavaMailProperties(javaMailProperties);
+	        return mailSender;
+	    }  
+```	    
