@@ -25,6 +25,7 @@ in application.properties files
 ```
 spring.main.banner-mode=off
 
+
 #email
 email.host=smtp.gmail.com
 email.port=587
