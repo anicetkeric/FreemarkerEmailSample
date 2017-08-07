@@ -20,7 +20,7 @@ Apache FreeMarker is a template engine: a Java library to generate text output (
 	</dependencies>
 ```
 ####	Configuration
-in application.properties files
+in application.properties file
 
 ```
 spring.main.banner-mode=off
